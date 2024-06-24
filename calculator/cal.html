@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="cal-main">
+        <form action="">
+            <input type="text" id="result"  class="val">
+        <input type="button" value="7" onclick="cal('7')" class="val-1">
+        <input type="button" value="8" onclick="cal('8')" class="val-1">
+        <input type="button" value="9" onclick="cal('9')" class="val-1"><br><br>
+        <input type="button" value="4" onclick="cal('4')" class="val-1">
+        <input type="button" value="5" onclick="cal('5')" class="val-1">
+        <input type="button" value="6" onclick="cal('6')" class="val-1"><br><br>
+        <input type="button" value="1" onclick="cal('1')" class="val-1">
+        <input type="button" value="2" onclick="cal('2')" class="val-1">
+        <input type="button" value="3" onclick="cal('3')" class="val-1"><br><br>
+        <input type="button" value="/" onclick="cal('/')" class="val-2">
+        <input type="button" value="*" onclick="cal('*')" class="val-2"><br><br>
+        <input type="button" value="+" onclick="cal('+')" class="val-2">
+        <input type="button" value="-" onclick="cal('-')" class="val-2"><br><br>
+        <input type="button" value="0" onclick="cal('0')" class="val-4">
+        <input type="button" value="." onclick="cal('.')" class="val-4"><br><br>
+        <input type="button" value="C" onclick="clearResult()" class="val-3"></td>
+        <input type="button" value="=" onclick="sumt()" class="val-4">
+    </form>
+    </div>
+</body>
+</html>
+<script>
+    
+        function cal(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function sumt() {
+            var result = eval(document.getElementById('result').value);
+            document.getElementById('result').value = result;
+        }
+    
+</script>

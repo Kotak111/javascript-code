@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table border="2" align="center">
+        <title>Corona Api</title>
+        <thead>
+            <th>dailyconfirmed</th>
+            <th>dailydeceased</th>
+            <th>dailyrecovered</th>
+            <th>date</th>
+            <th>dateymd</th>
+            <th>totalconfirmed</th>
+            <th>totaldeceased</th>
+            <th>totalrecovered</th>
+        </thead>
+        <tbody id="mydata">
+
+        </tbody>
+    </table>
+</body>
+</html>
+<script src="../javascript/data.js"></script>
+<script>
+    console.log(arr);
+    mydata = ""
+    arr.forEach(element => {
+        mydata+=`
+        <tr>
+            <td>${element.dailyconfirmed}</td>
+            <td>${element.dailydeceased}</td>
+            <td>${element.dailyrecovered}</td>
+            <td>${element.date}</td>
+            <td>${element.dateymd}</td>
+            <td>${element.totalconfirmed}</td>
+            <td>${element.totaldeceased}</td>
+            <td>${element.totalrecovered}</td>
+
+            </tr>
+        
+        
+        `
+        document.getElementById("mydata").innerHTML=mydata;        
+    });
+</script>

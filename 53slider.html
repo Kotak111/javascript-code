@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Previous Next Slider</title>
+  <style>
+    #slider-container {
+      width: 900px; /* Adjust based on your content size */
+      overflow: hidden;
+    }
+
+    #slider {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
+
+    .slide {
+      width: 900px; /* Adjust based on your content size */
+      border: 2px solid red;
+      margin: auto;
+    }
+
+    button {
+      margin-top: 10px;
+    }
+    img
+    {
+        width: 900px;
+    }
+  </style>
+</head>
+<body>
+
+<div id="slider-container">
+  <div id="slider">
+    <div class="slide"><img src="img/02.jpg" alt="Image 1"></div>
+    <div class="slide"><img src="img/03.jpg" alt="Image 2"></div>
+    <div class="slide"><img src="img/gallery01.jpg" alt="Image 3"></div>
+    <!-- Add more slides as needed -->
+  </div>
+</div>
+
+<button onclick="prevSlide()">Previous</button>
+<button onclick="nextSlide()">Next</button>
+
+<script>
+  const slider = document.getElementById('slider');
+  let currentIndex = 0;
+
+  function prevSlide() {
+    if (currentIndex > 0) {
+      currentIndex--;
+    } else {
+      currentIndex = slider.children.length - 1;
+    }
+    updateSlider();
+  }
+
+  function nextSlide() {
+    if (currentIndex < slider.children.length - 1) {
+      currentIndex++;
+    } else {
+      currentIndex = 0;
+    }
+    updateSlider();
+  }
+
+  function updateSlider() {
+    const translateValue = -currentIndex * 900; // Adjust based on your content size
+    slider.style.transform = `translateX(${translateValue}px)`;
+  }
+</script>
+
+</body>
+</html>

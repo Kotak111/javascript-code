@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            border: 2px solid red;
+            width: 70px;
+            height: 50px;
+            margin: auto;
+            margin-top: 20%;
+            padding: 20px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 34px;
+            background-color: red;
+            border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="demo"></div>
+</body>
+</html>
+<script>
+   
+   
+   class demo{
+        constructor(){
+            let a = setInterval(start,250);
+         let count=0;
+        
+       
+        function start()
+         {
+                let x= document.getElementById("demo");
+                x.innerHTML=count++;
+            if(count==501)
+            {
+                clearInterval(a);
+            }
+        }
+    }
+}
+          const data=new demo(); //object of class
+          document.getElementById("demo").innerHTML=data;
+</script>

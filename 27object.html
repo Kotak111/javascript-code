@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let obj={name:"john",age:25,profeesion:"doctor"}
+    console.log(obj);
+
+    //mainly use for in loop
+    for(let x in obj)
+    {
+        console.log(x+"="+obj[x]);
+    }
+    //mainly use map in object 
+    Object.entries(obj).map((ele)=>{
+        console.log(ele);
+    })
+</script>

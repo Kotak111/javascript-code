@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <table align="center" border="2"> 
+    <thead>
+        <th>last_updated</th>
+        <th>last_updated_epoch</th>
+        <th>temp_c</th>
+        <th>temp_f</th>
+        <th>wind_degree</th>
+        <th>Country</th>
+        <th>localtime</th>
+        <th>name</th>
+        <th>region</th>
+        <th>tz_id</th>
+
+    
+    </thead>
+    <tbody id="mydata">  
+    </tbody></table>
+</body>
+</html>
+<script>
+    fetch('https://api.weatherapi.com/v1/current.json?key=3dfe9819009f46f593f80514240301&q=mendarda')
+    .then((res)=>res.json())
+    .then((Res)=>{
+        console.log(Res);
+        HTMLDATA=''
+        HTMLDATA+=`
+        <tr>
+            <td>${Res.current.last_updated}</td>
+            <td>${Res.current.last_updated_epoch}</td>
+            <td>${Res.current.temp_c}</td>
+            <td>${Res.current.temp_f}</td>
+            <td>${Res.current.wind_degree}</td>
+            <td>${Res.location.country}</td>
+            <td>${Res.location.localtime}</td>
+            <td>${Res.location.name}</td>
+            <td>${Res.location.region}</td>
+            <td>${Res.location.tz_id}</td>
+
+            </tr>
+        `
+        document.getElementById("mydata").innerHTML=HTMLDATA;
+    })
+</script>

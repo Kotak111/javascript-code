@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .slider{
+        display: none;
+    }
+    img{
+        width: 100%;
+        height: 500px;
+    }
+</style>
+<body>
+    <div class="main">
+        <div class="slider">
+            <img src="img/gallery01.jpg" alt="">
+        </div>
+        <div class="slider">
+            <img src="img/02.jpg" alt="">
+        </div>
+        <div class="slider">
+            <img src="img/03.jpg" alt="">
+        </div>
+    </div>
+</body>
+</html>
+<script>
+    let currentslide=1;
+    display(currentslide)
+    function set(num){
+            setInterval(() => {
+                display(currentslide+=num)
+            }, 3000);
+        }
+        window.onload=function(){
+            set(1)
+        }
+    function display(num)
+    {
+        
+        let slides = document.getElementsByClassName("slider");
+        if(num>slides.length)
+        {
+            currentslide=1;
+        }
+        if(num<1)
+        {
+            currentslide=slides.length
+        }
+        for(let i=0;i<slides.length;i++)
+        {
+            slides[i].style.display="none"
+        }
+        slides[currentslide-1].style.display="block"
+    }
+</script>

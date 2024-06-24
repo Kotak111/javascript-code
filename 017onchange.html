@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="" id="car" onchange="resh()">
+        <option value="bmw">bmw</option>
+        <option value="harrier">harrier</option>
+        <option value="audi">audi</option>
+        <option value="skoda">skoda</option>
+    </select>
+    <h1 id="print"></h1>
+</body>
+</html>
+<script>
+    function resh(){
+        let data=document.getElementById("car").value
+        document.getElementById("print").innerHTML="you have select :- "+data
+        console.log(data);
+    }
+</script>

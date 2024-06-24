@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    const obj={id:1,name:"harsh",age:21,email:"kotakh311@gmail.com"};
+    // console.log(obj);
+    // console.log(obj['name']);
+
+    //for in
+    // {
+    //     for(let data in obj)
+    //     {
+    //         console.log(obj[data]);
+    //     }
+    // }
+
+    //map
+    let newdata=Object.entries(obj).map((ele)=>{
+        console.log(ele[1]);
+    })
+</script>

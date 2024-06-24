@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    //include method
+    // let data="hello welcome to javascript world"
+    // console.log(data.includes("hello"));
+
+    //every and some 
+    let age=[12,15,19,20];
+    console.log(age.some(test));
+    console.log(age.every(test));
+    function test(age){
+        return age>18
+    }
+
+    //splice method
+    let fruit=["apple","orange","kiwi","mango"];
+    fruit.splice(2,2)//to remove from perticlular index
+    fruit.splice(2,0,"banana","cherry")//to add a value in perticular index
+    console.log(fruit);
+</script>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    img{
+        height: 200px;
+        width: 300px;
+    }
+</style>
+<body>
+    
+    <table border="2" align="center">
+        <thead>
+            <th>Title</th>
+            <th>Year</th>
+            <th>Runtime</th>
+            <th>Poster</th>
+        </thead>
+        <tbody id="mydata">
+
+        </tbody>
+    </table>
+</body>
+</html>
+<script>
+    fetch("https://my-json-server.typicode.com/horizon-code-academy/fake-movies-api/movies")
+    .then((res)=>res.json())
+    .then((Res)=>{
+        HTMLDATA=''
+        Res.forEach(element => {
+            HTMLDATA+=`
+         <tr>
+            <td>${element.Title}</td>
+            <td>${element.Year}</td>
+            <td>${element.Runtime}</td>
+            <td><img src=${element.Poster} alt=poster/></td>
+
+            
+            </tr>
+        `
+        document.getElementById("mydata").innerHTML=HTMLDATA;
+        });
+       
+    })
+</script>

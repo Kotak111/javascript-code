@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="" method="post" onsubmit="return  validdata()" >
+    <table align="center"  border="2">
+        
+        <tr>
+            <td>name</td>
+            <td><input type="text" name="name" id="name"></td>
+        </tr>
+        <tr>
+            <td>email</td>
+            <td><input type="email" name="email" id="email"></td>
+        </tr>
+        <tr>
+            <td>password</td>
+            <td><input type="password" name="pwd" id="pwd"></td>
+        </tr>
+        <tr>
+            <td>gender</td>
+            <td><input type="radio" name="male" id="gender">male
+            <input type="radio" name="female" id="gender">female
+            </td>
+        </tr>
+        <tr>
+            <td>hobby</td>
+            <td><input type="checkbox" name="cricket" id="hobby">cricket
+            <input type="checkbox" name="hocky" id="hobby">hocky</td>
+        </tr>
+        <tr>
+            <td>mobile</td>
+            <td>
+                <input type="text" name="number" id="number">
+            </td>
+        </tr>
+        <tr >
+            <td colspan="2"  align="center"><input type="submit" value="submit" ></td>
+        </tr>
+    
+    </table>
+</form>
+</body>
+</html>
+<script>
+    function validdata(){
+        let name=document.getElementById('name').value;
+        if(name == "")
+        {
+            alert("plese enter name ");
+            document.getElementById('name').focus();
+            return false;
+        }
+         let email=document.getElementById('email').value;
+         if(email == "")
+        {
+            alert("plese enter email ");
+            document.getElementById('email').focus();
+            return false;
+        }
+        let password=document.getElementById('pwd').value;
+         if(password == "")
+        {
+            alert("plese enter password ");
+            document.getElementById('pwd').focus();
+            return false;
+        }
+        if(document.getElementById('gender').form.gender[0].checked==false && document.getElementById('gender').form.gender[1].checked==false){
+            alert("plese select gender");
+            return false;
+        }
+        if(document.getElementById('hobby').form.hobby[0].checked==false && document.getElementById('hobby').form.hobby[1].checked==false){
+            alert("plese select hobby");
+            return false;
+        }
+        let mobile=document.getElementById('number').value;
+         if(mobile == "")
+        {
+            alert("plese enter mobile ");
+            document.getElementById('number').focus();
+            return false;
+        }
+
+    }
+</script>

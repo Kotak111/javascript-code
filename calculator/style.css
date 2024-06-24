@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.cal-main{
+    border: 2px solid red;
+    margin: auto;
+    width: 20%;
+    height: auto;
+    margin-top: 10%;
+}
+.val{
+    width: 100%!important;
+    height: 60px;
+    font-size: 40px;
+    margin-left: 0;
+    font-weight: bold;
+}
+.val-1{
+    width: 32.4%;
+    height: 60px;
+    font-size: 20px;
+    background-color: lightsalmon;
+    font-weight: bold;
+}
+.val-2{
+    width: 49%;
+    height: 50px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}
+.val-3{
+    width: 49%;
+    height: 50px;
+    font-size: 20px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+.val-4{
+    width: 49%;
+    height: 50px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+    font-weight: bold;
+}

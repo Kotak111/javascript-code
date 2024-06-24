@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <table colspan="2" border="2" align="center">
+        <form action="" method="post" >
+                <tr>
+                    <td>name</td>
+                    <td><input type="text" name="name" id="name" onblur="namevalid(this,'spimd')"></td>
+                   <td> <span id="spind"></span></td>
+                </tr>
+                <tr>
+                    <td>email</td>
+                    <td><input type="email" name="email" id="email" onblur="emailvalid(this,'espan')"></td>
+                    <td><span id="espan"></span></td>
+                </tr>
+                <tr>
+                    <td>password</td>
+                    <td><input type="password" name="pwd" id="pwd" onblur="passvalid(this,'pspan')"></td>
+                    <td><span id="pspan"></span></td>
+                </tr>
+                <tr>
+                    <td>number</td>
+                    <td><input type="text" name="nom" id="nom" onblur="numbervalid(this,'nspan')"></td>
+                    <td><span id="nspan"></span></td>
+                </tr> 
+
+        </form>
+
+    </table>
+</body>
+</html>
+<script>
+    function namevalid(e,spnid)
+    {
+        let name=/^[a-zA-Z]+$/
+        if(name.test(e.value))
+        {
+            document.getElementById('spind').innerHTML="";
+
+        }
+        else{
+            document.getElementById('spind').innerHTML="plese enter valid data"
+        }
+    }
+    function emailvalid(e,spnid)
+    {
+        let email=/^[a-z0-9.-_]+@([a-z0-9.-_])+\.([a-z]{2,3})$/
+        if(email.test(e.value))
+        {
+            document.getElementById('espan').innerHTML="";
+
+        }
+        else{
+            document.getElementById('espan').innerHTML="plese enter valid data"
+        }
+    }
+    function passvalid(e,spnid)
+    {
+        let pwd=/^[a-z0-9]{3,5}$/
+        if(pwd.test(e.value))
+        {
+            document.getElementById('pspan').innerHTML="";
+
+        }
+        else{
+            document.getElementById('pspan').innerHTML="plese enter valid data"
+        }
+    }
+    function numbervalid(e,spnid)
+    {
+        let number=/^[0-9]{10}$/
+        if(number.test(e.value))
+        {
+            document.getElementById('nspan').innerHTML="";
+
+        }
+        else{
+            document.getElementById('nspan').innerHTML="plese enter valid data"
+        }
+
+    }
+
+</script>

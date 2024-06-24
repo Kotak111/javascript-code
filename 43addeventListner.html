@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="one ">helo javascript </p>
+    <button id="first" >click</button>
+    <button id="second">myclick</button>
+</body>
+</html>
+<script>
+    document.querySelector("#first").addEventListener('click',function(){
+        document.getElementById('one').style.color="red";
+        document.getElementById('one').style.background="pink";
+        document.getElementById('one').textAlign="center";
+    })
+    document.querySelector("#second").addEventListener('click',function(){
+        document.getElementById('one').style.color="yellow";
+        document.getElementById('one').style.background="green";
+        document.getElementById('one').textAlign="center";
+    })
+</script>

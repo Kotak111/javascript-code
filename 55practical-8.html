@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<table border="3">
+    <tr>
+        <th>id</th>
+        <th>name</th>
+    </tr>
+    <tr>
+       <td id="demo"></td>
+       <td id="demo1"></td>
+        
+      </tr>
+</table>
+</body>
+</html>
+<script>
+
+    const arr=[
+        {
+            id:1,
+            name:"Every child is an artist the problem is staying an artist when you grow up” – Pablo Picasso"
+
+        },
+       {
+        id:2,
+        name:"“Art is a collaboration between God and the artist, and the less the artist does the better.” – Andre Gide"
+       },
+       {
+        id:3,
+        name:"“Every artist was first an amateur.” – Ralph Waldo Emerson"
+       },
+       {
+        id:4,
+        name:"“To create one’s own world takes courage.” – Georgia O’Keeffe"
+       }
+    ]
+
+
+
+    HTMLDATA= ' '
+    HTMLDATA1 = ' '
+    arr.forEach(element => {
+        HTMLDATA+=`
+                <td>${element.id}</td><br>
+                
+             
+                `
+
+        HTMLDATA1+=`
+        <td>${element.name}</td><br>
+        `
+
+    });
+    document.getElementById("demo").innerHTML=HTMLDATA;
+    document.getElementById("demo1").innerHTML=HTMLDATA1;
+</script>
